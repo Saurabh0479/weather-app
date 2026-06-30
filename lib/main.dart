@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(),  //changes theme in whole pages
+      theme: ThemeData.dark(useMaterial3: true), //changes theme in whole pages
       home: const WeatherScreen(),
     );
   }

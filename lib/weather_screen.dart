@@ -24,6 +24,7 @@ class WeatherScreen extends StatelessWidget {
       body: Padding(
         padding: const EdgeInsets.all(18.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start, //it makes every things to start from left side
           children: [
             //main card
             SizedBox(
@@ -35,7 +36,7 @@ class WeatherScreen extends StatelessWidget {
                 ),
                 
                 child: ClipRRect(
-                   borderRadius: BorderRadius.circular(16),
+                  
                   child: BackdropFilter(
                     filter: ImageFilter.blur(
                       sigmaX: 10,
@@ -61,7 +62,7 @@ class WeatherScreen extends StatelessWidget {
                           Text(
                             'Rain', 
                           style: TextStyle(
-                            fontSize: 24
+                            fontSize: 24,
                             ),
                           ),
                       ],
@@ -73,8 +74,29 @@ class WeatherScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20), //helps in leaving space btw info
-        
-            // Additional Info
+            // Weather forecast cards
+             const Text(
+                'Weather Forecast',
+              style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold, 
+               ),
+              ),
+               const SizedBox(height: 14),
+               SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                 child: Row(
+                  children: [
+                     
+                      HourlforecastItem(),
+                      HourlforecastItem(),
+                      HourlforecastItem(),
+                      HourlforecastItem(),
+                      HourlforecastItem(),
+                      HourlforecastItem(),
+                   ],
+                 ),
+               ),
             const Placeholder(
               fallbackHeight: 150,
             ),
@@ -87,5 +109,46 @@ class WeatherScreen extends StatelessWidget {
           ),
       ),
     );
+  }
+}
+
+class HourlforecastItem extends StatelessWidget {
+  const HourlforecastItem({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+                        elevation: 6,
+                        child: Container(
+                          width: 100,
+                          padding: const EdgeInsets.all(8.0),
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                          ),
+                          child: Column(
+                            children: [
+                              Text(
+                                '03:00',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              const SizedBox(height: 8),
+                              Icon(
+                                Icons.cloud,
+                                size: 32,
+                              ),
+                              const SizedBox(height: 8),
+                              Text(
+                                '34°',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
   }
 }

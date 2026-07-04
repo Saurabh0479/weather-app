@@ -1,4 +1,6 @@
+A new Flutter project
 # weather_app
+
 ![alt text](<Screenshot 2026-07-04 101201.png>)
 ![alt text](<Screenshot 2026-07-04 101246.png>)
 ![alt text](<Screenshot 2026-07-04 101328.png>)
@@ -7,21 +9,24 @@
 
 ## Tools used
 
-language: Dart
-framework: Flutter
-API: from Openweather
+- language: Dart
+- framework: Flutter
+- API: from Openweather
 
-This project shows real time 3 hours interval of weather forecast using Openweather's API.
+- This project shows real time 3 hours interval of weather forecast using Openweather's API.
 
 ## Icons
 
-Clouds and Rain  ---->   Cloud
-clear + night    ----->  moon
-clear + day      ---->   sunny
+- Clouds and Rain  ---->   Cloud
+- clear + night    ----->  moon
+- clear + day      ---->   sunny
+
+# Hot Reloading
+
+Hot reloading feature helps in running the new feature without altering or losing the previous data.
 
 
-
-A new Flutter project.
+.
 
 ## Getting Started
 

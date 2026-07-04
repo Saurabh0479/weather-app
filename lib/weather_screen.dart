@@ -19,7 +19,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
 
   Future<Map<String, dynamic>> getCurrentWeather() async {
     try {
-      String cityName = 'London';
+      String cityName = 'LONDON';
       final res = await http.get(
         Uri.parse(
           'https://api.openweathermap.org/data/2.5/forecast?q=$cityName&APPID=a8671e99d9179d7e4dea117631656d81&units=metric',
@@ -48,7 +48,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
+        title:  Text(
           'Weather App',
           style: TextStyle(fontWeight: FontWeight.bold),
         ),

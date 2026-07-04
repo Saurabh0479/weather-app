@@ -1,4 +1,5 @@
 # weather_app
+![alt text](<Screenshot 2026-07-04 101201.png>)
 
 A new Flutter project.
 
